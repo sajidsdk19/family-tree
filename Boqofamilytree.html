@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Nastaliq Urdu', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            direction: rtl;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.3em;
+            margin-bottom: 50px;
+        }
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .generation {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .person {
+            border: 3px solid #fff;
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 220px;
+            max-width: 300px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .person:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        .person.gen1 {
+            background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);
+        }
+        .person.gen2 {
+            background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%);
+        }
+        .person.gen3 {
+            background: linear-gradient(135deg, #27ae60 0%, #196f3d 100%);
+        }
+        .person.gen4 {
+            background: linear-gradient(135deg, #d35400 0%, #a04000 100%);
+        }
+        .person.gen5 {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+        }
+        .person.gen6 {
+            background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);
+        }
+        .person.gen7 {
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
+            border: 4px solid gold;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 15px rgba(255,215,0,0.5);
+        }
+        .name {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border-bottom: 2px solid rgba(255,255,255,0.7);
+            padding-bottom: 8px;
+        }
+        .info {
+            color: white;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .info div {
+            margin: 5px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+            font-weight: 500;
+        }
+        .connector {
+            width: 2px;
+            height: 40px;
+            background: #95a5a6;
+            margin: 0 auto;
+        }
+        .gen-label {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            padding: 10px;
+            background: rgba(52, 73, 94, 0.1);
+            border-radius: 10px;
+        }
+        .branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .children-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏔 خاندانِ بوقو</h1>
+        <div class="subtitle">شجرہ نسب (1300-2025)</div>
+        
+        <div class="tree">
+            <!-- Generation 1 -->
+            <div class="gen-label">نسل اول (1300-1400)</div>
+            <div class="generation">
+                <div class="person gen1">
+                    <div class="name">سیوم (Seom)</div>
+                    <div class="info">
+                        <div>📅 دور: 1300–1400</div>
+                        <div>📍 ترچائی، گل مِت</div>
+                        <div>💼 ماہر حکیم اور اسلحہ ساز</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 2 -->
+            <div class="gen-label">نسل دوم (1400-1500)</div>
+            <div class="generation">
+                <div class="person gen2">
+                    <div class="name">علی بوقو</div>
+                    <div class="info">
+                        <div>📅 دور: 1400–1500</div>
+                        <div>📍 گل مِت → علی آباد</div>
+                        <div>👥 بارہ بیٹے</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 3 -->
+            <div class="gen-label">نسل سوم (1500-1600)</div>
+            <div class="generation">
+                <div class="person gen3">
+                    <div class="name">فرگت (Fargat)</div>
+                    <div class="info">
+                        <div>📍 حماد آباد</div>
+                    </div>
+                </div>
+                <div class="person gen3">
+                    <div class="name">قلم (Qalam)</div>
+                    <div class="info">
+                        <div>📅 دور: 1500–1600</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 4 -->
+            <div class="gen-label">نسل چہارم (1600-1700)</div>
+            <div class="generation">
+                <div class="person gen4">
+                    <div class="name">نظر شاہ</div>
+                    <div class="info">
+                        <div>📅 دور: 1600–1700</div>
+                        <div>📍 مرتضیٰ آباد</div>
+                    </div>
+                </div>
+                <div class="person gen4">
+                    <div class="name">عبدالشاہ</div>
+                    <div class="info">
+                        <div>📅 دور: 1600–1700</div>
+                        <div>📍 مرتضیٰ آباد</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 5 -->
+            <div class="gen-label">نسل پنجم (1891-1999)</div>
+            <div class="generation">
+                <div class="person gen5">
+                    <div class="name">طوالُد شاہ</div>
+                    <div class="info">
+                        <div>📅 1891–1999</div>
+                        <div>💍 زوجہ: گلنارا</div>
+                        <div>👨‍👩‍👧‍👦 چھ بیٹے، ایک بیٹی</div>
+                    </div>
+                </div>
+                <div class="person gen5">
+                    <div class="name">اکبر</div>
+                    <div class="info">
+                        <div>👤 بھائی (طوالُد شاہ)</div>
+                        <div>👨‍👦 بیٹا: کرم دین</div>
+                    </div>
+                </div>
+                <div class="person gen5">
+                    <div class="name">خلیل</div>
+                    <div class="info">
+                        <div>📅 عمر: 80 سال (2025)</div>
+                        <div>💼 انجینئر (ریٹائرڈ)</div>
+                        <div>📍 حماد آباد</div>
+                    </div>
+                </div>
+                <div class="person gen5">
+                    <div class="name">خلیفہ (Khalifa)</div>
+                    <div class="info">
+                        <div>📍 گل مِت → حماد آباد</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 6 - Children of Tawalud Shah -->
+            <div class="gen-label">نسل ششم - اولادِ طوالُد شاہ</div>
+            <div class="generation">
+                <div class="person gen6">
+                    <div class="name">محمد علی</div>
+                    <div class="info">
+                        <div>📅 1933–2024</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">پُنو (نظر شاہ)</div>
+                    <div class="info">
+                        <div>👤 بیٹا</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">اسلام شاہ</div>
+                    <div class="info">
+                        <div>👤 بیٹا</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">ایوب خان</div>
+                    <div class="info">
+                        <div>👤 بیٹا</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">بابر</div>
+                    <div class="info">
+                        <div>👤 بیٹا</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">زوارہ</div>
+                    <div class="info">
+                        <div>👤 بیٹا</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">دورو (Duro)</div>
+                    <div class="info">
+                        <div>👧 بیٹی</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Generation 6 - Children of Akbar & Khalil -->
+            <div class="gen-label">نسل ششم - اولادِ اکبر و خلیل</div>
+            <div class="generation">
+                <div class="person gen6">
+                    <div class="name">کرم دین</div>
+                    <div class="info">
+                        <div>👤 بیٹا (اکبر)</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">بُلا</div>
+                    <div class="info">
+                        <div>👤 بھائی (خلیل)</div>
+                    </div>
+                </div>
+                <div class="person gen6">
+                    <div class="name">صوبیدار میجر کمرچ</div>
+                    <div class="info">
+                        <div>👤 بھائی (خلیل)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Generation 7 -->
+            <div class="gen-label">نسل ہفتم</div>
+            <div class="generation">
+                <div class="person gen7">
+                    <div class="name">جمعہ خان</div>
+                    <div class="info">
+                        <div>👤 بیٹا (کرم دین)</div>
+                    </div>
+                </div>
+                <div class="person gen7">
+                    <div class="name">غلام دین</div>
+                    <div class="info">
+                        <div>👤 بیٹا (کرم دین)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
