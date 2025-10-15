@@ -51,12 +51,14 @@
         .person {
             border: 3px solid #fff;
             border-radius: 15px;
-            padding: 20px;
-            min-width: 220px;
-            max-width: 300px;
+            padding: 15px;
+            width: 100%;
+            min-width: 180px;
+            max-width: 280px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             position: relative;
+            box-sizing: border-box;
         }
         .person:hover {
             transform: translateY(-8px) scale(1.05);
@@ -142,21 +144,83 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
         }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1.1em;
+            }
+            .person {
+                min-width: 150px;
+                max-width: 100%;
+                padding: 12px;
+            }
+            .name {
+                font-size: 1.3em;
+            }
+            .info {
+                font-size: 1em;
+            }
+            .generation {
+                gap: 15px;
+            }
+            .branch {
+                min-width: 280px;
+                max-width: 100%;
+                margin: 0 10px;
+                padding: 15px;
+            }
+            .children-group {
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .person {
+                min-width: 130px;
+                padding: 10px;
+            }
+            .name {
+                font-size: 1.2em;
+            }
+            .info {
+                font-size: 0.9em;
+            }
+            .children-group {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🏔 خاندانِ بوقو</h1>
-        <div class="subtitle">شجرہ نسب (1300-2025)</div>
+        <div class="subtitle">شجرہ نسب (1700-1999)</div>
         
         <div class="tree">
             <!-- Generation 1 -->
-            <div class="gen-label">نسل اول (1300-1400)</div>
+            <div class="gen-label">نسل اول (1700-1770)</div>
             <div class="generation">
                 <div class="person gen1">
                     <div class="name">سیوم (Seom)</div>
                     <div class="info">
-                        <div>📅 دور: 1300–1400</div>
+                        <div>📅 1700–1770</div>
                         <div>📍 ترچائی، گل مِت</div>
                         <div>💼 ماہر حکیم اور اسلحہ ساز</div>
                     </div>
@@ -166,12 +230,12 @@
             <div class="connector"></div>
             
             <!-- Generation 2 -->
-            <div class="gen-label">نسل دوم (1400-1500)</div>
+            <div class="gen-label">نسل دوم (1750-1820)</div>
             <div class="generation">
                 <div class="person gen2">
                     <div class="name">علی بوقو</div>
                     <div class="info">
-                        <div>📅 دور: 1400–1500</div>
+                        <div>📅 1750–1820</div>
                         <div>📍 گل مِت → علی آباد</div>
                         <div>👥 بارہ بیٹے</div>
                     </div>
@@ -181,18 +245,19 @@
             <div class="connector"></div>
             
             <!-- Generation 3 -->
-            <div class="gen-label">نسل سوم (1500-1600)</div>
+            <div class="gen-label">نسل سوم (1790-1860)</div>
             <div class="generation">
                 <div class="person gen3">
                     <div class="name">فرگت (Fargat)</div>
                     <div class="info">
+                        <div>📅 1790–1860</div>
                         <div>📍 حماد آباد</div>
                     </div>
                 </div>
                 <div class="person gen3">
                     <div class="name">قلم (Qalam)</div>
                     <div class="info">
-                        <div>📅 دور: 1500–1600</div>
+                        <div>📅 1795–1865</div>
                     </div>
                 </div>
             </div>
@@ -200,19 +265,19 @@
             <div class="connector"></div>
             
             <!-- Generation 4 -->
-            <div class="gen-label">نسل چہارم (1600-1700)</div>
+            <div class="gen-label">نسل چہارم (1840-1910)</div>
             <div class="generation">
                 <div class="person gen4">
                     <div class="name">نظر شاہ</div>
                     <div class="info">
-                        <div>📅 دور: 1600–1700</div>
+                        <div>📅 1840–1910</div>
                         <div>📍 مرتضیٰ آباد</div>
                     </div>
                 </div>
                 <div class="person gen4">
                     <div class="name">عبدالشاہ</div>
                     <div class="info">
-                        <div>📅 دور: 1600–1700</div>
+                        <div>📅 1845–1915</div>
                         <div>📍 مرتضیٰ آباد</div>
                     </div>
                 </div>
@@ -221,12 +286,12 @@
             <div class="connector"></div>
             
             <!-- Generation 5 -->
-            <div class="gen-label">نسل پنجم (1891-1999)</div>
+            <div class="gen-label">نسل پنجم (1891-1991)</div>
             <div class="generation">
                 <div class="person gen5">
                     <div class="name">طوالُد شاہ</div>
                     <div class="info">
-                        <div>📅 1891–1999</div>
+                        <div>📅 1891–1991</div>
                         <div>💍 زوجہ: گلنارا</div>
                         <div>👨‍👩‍👧‍👦 چھ بیٹے، ایک بیٹی</div>
                     </div>
@@ -241,7 +306,7 @@
                 <div class="person gen5">
                     <div class="name">خلیل</div>
                     <div class="info">
-                        <div>📅 عمر: 80 سال (2025)</div>
+                        <div>📅 1900–1970</div>
                         <div>💼 انجینئر (ریٹائرڈ)</div>
                         <div>📍 حماد آباد</div>
                     </div>
@@ -264,7 +329,7 @@
                     <div class="person gen5" style="margin-bottom: 20px; background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);">
                         <div class="name">طوالُد شاہ</div>
                         <div class="info">
-                            <div>📅 1891–1999</div>
+                            <div>📅 1891–1991</div>
                             <div>💍 زوجہ: گلنارا</div>
                             <div>👨‍👩‍👧‍👦 چھ بیٹے، ایک بیٹی</div>
                         </div>
@@ -274,7 +339,7 @@
                         <div class="person gen6">
                             <div class="name">محمد علی</div>
                             <div class="info">
-                                <div>📅 1933–2024</div>
+                                <div>📅 1925–موجود</div>
                                 <div>👤 بیٹا (طوالُد شاہ)</div>
                             </div>
                         </div>
